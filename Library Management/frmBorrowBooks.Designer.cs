@@ -1,6 +1,6 @@
 ﻿namespace Library_Management
 {
-    partial class frmBorrowAndReturnBooks
+    partial class frmBorrowBooks
     {
         /// <summary>
         /// Required designer variable.

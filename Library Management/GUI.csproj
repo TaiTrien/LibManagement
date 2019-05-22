@@ -58,11 +58,17 @@
     <Compile Include="frmAddNewBooks.Designer.cs">
       <DependentUpon>frmAddNewBooks.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddDelMod.cs">
+    <Compile Include="frmReadersManage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddDelMod.Designer.cs">
-      <DependentUpon>frmAddDelMod.cs</DependentUpon>
+    <Compile Include="frmReadersManage.Designer.cs">
+      <DependentUpon>frmReadersManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTitlesManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTitlesManage.Designer.cs">
+      <DependentUpon>frmTitlesManage.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAddNewReaders.cs">
       <SubType>Form</SubType>
@@ -70,17 +76,23 @@
     <Compile Include="frmAddNewReaders.Designer.cs">
       <DependentUpon>frmAddNewReaders.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddNewTitles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddNewTitles.Designer.cs">
+      <DependentUpon>frmAddNewTitles.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBooksManage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmBooksManage.Designer.cs">
       <DependentUpon>frmBooksManage.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBorrowAndReturnBooks.cs">
+    <Compile Include="frmBorrowBooks.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBorrowAndReturnBooks.Designer.cs">
-      <DependentUpon>frmBorrowAndReturnBooks.cs</DependentUpon>
+    <Compile Include="frmBorrowBooks.Designer.cs">
+      <DependentUpon>frmBorrowBooks.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -100,6 +112,12 @@
     <Compile Include="frmMenuBooks.Designer.cs">
       <DependentUpon>frmMenuBooks.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReturnBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReturnBooks.Designer.cs">
+      <DependentUpon>frmReturnBooks.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSearchBooks.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,17 +129,23 @@
     <EmbeddedResource Include="frmAddNewBooks.resx">
       <DependentUpon>frmAddNewBooks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddDelMod.resx">
-      <DependentUpon>frmAddDelMod.cs</DependentUpon>
+    <EmbeddedResource Include="frmReadersManage.resx">
+      <DependentUpon>frmReadersManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTitlesManage.resx">
+      <DependentUpon>frmTitlesManage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddNewReaders.resx">
       <DependentUpon>frmAddNewReaders.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAddNewTitles.resx">
+      <DependentUpon>frmAddNewTitles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBooksManage.resx">
       <DependentUpon>frmBooksManage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBorrowAndReturnBooks.resx">
-      <DependentUpon>frmBorrowAndReturnBooks.cs</DependentUpon>
+    <EmbeddedResource Include="frmBorrowBooks.resx">
+      <DependentUpon>frmBorrowBooks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -131,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuBooks.resx">
       <DependentUpon>frmMenuBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReturnBooks.resx">
+      <DependentUpon>frmReturnBooks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSearchBooks.resx">
       <DependentUpon>frmSearchBooks.cs</DependentUpon>
@@ -226,6 +253,51 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\loupe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reader2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reader3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agenda21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agenda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\author-sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-bag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\envelope.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\name.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bald-man-with-glasses.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

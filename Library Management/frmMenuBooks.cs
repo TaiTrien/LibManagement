@@ -16,24 +16,23 @@ namespace Library_Management
             InitializeComponent();
         }
 
-        public static implicit operator frmMenuBooks(frmAddDelMod v)
+        public static implicit operator frmMenuBooks(frmTitlesManage v)
         {
             throw new NotImplementedException();
         }
-
+        // create a form to add, delete, modify title
         private void btnTitleManage_Click(object sender, EventArgs e)
         {
-            frmAddDelMod frmAddDelModTitle = new frmAddDelMod(); // create a form to add, delete, modify title
-            frmAddDelModTitle.TopLevel = false;
-            this.Controls.Add(frmAddDelModTitle);
+            frmTitlesManage frmAddDelModTitles = new frmTitlesManage(); 
+            frmAddDelModTitles.TopLevel = false;
+            this.Controls.Add(frmAddDelModTitles);
             this.pnControl.Hide();
             this.pnFooter.Hide();
-            frmAddDelModTitle.Show();
+            frmAddDelModTitles.Show();
         }
-
+        // create a form to add, delete, modify, search, borrow and return books
         private void btnBooksManage_Click(object sender, EventArgs e)
         {
-            // create a form to add, delete, modify, search, borrow and return books
             frmBooksManage frmBooksManage = new frmBooksManage(); 
             frmBooksManage.TopLevel = false;
             this.Controls.Add(frmBooksManage);

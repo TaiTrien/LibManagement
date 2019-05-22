@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Library_Management
 {
-    public partial class frmAddDelMod : Form
+    public partial class frmReturnBooks : Form
     {
-        public frmAddDelMod()
+        public frmReturnBooks()
         {
             InitializeComponent();
         }

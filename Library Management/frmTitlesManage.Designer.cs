@@ -1,6 +1,6 @@
 ﻿namespace Library_Management
 {
-    partial class frmBooksManage
+    partial class frmTitlesManage
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.dgvTitlesManage = new System.Windows.Forms.DataGridView();
             this.pnFooter = new System.Windows.Forms.Panel();
-            this.lbReturn = new System.Windows.Forms.Label();
-            this.btnReturn = new System.Windows.Forms.Button();
-            this.lbBorrow = new System.Windows.Forms.Label();
-            this.btnBorrow = new System.Windows.Forms.Button();
-            this.lbSearch = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -45,22 +40,25 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.dgvBooksManage = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTitlesManage)).BeginInit();
             this.pnFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBooksManage)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dgvTitlesManage
+            // 
+            this.dgvTitlesManage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTitlesManage.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgvTitlesManage.Location = new System.Drawing.Point(0, 0);
+            this.dgvTitlesManage.Name = "dgvTitlesManage";
+            this.dgvTitlesManage.RowTemplate.Height = 24;
+            this.dgvTitlesManage.Size = new System.Drawing.Size(882, 430);
+            this.dgvTitlesManage.TabIndex = 0;
             // 
             // pnFooter
             // 
-            this.pnFooter.Controls.Add(this.lbReturn);
-            this.pnFooter.Controls.Add(this.btnReturn);
-            this.pnFooter.Controls.Add(this.lbBorrow);
-            this.pnFooter.Controls.Add(this.btnBorrow);
-            this.pnFooter.Controls.Add(this.lbSearch);
-            this.pnFooter.Controls.Add(this.btnSearch);
             this.pnFooter.Controls.Add(this.pictureBox3);
             this.pnFooter.Controls.Add(this.pictureBox2);
             this.pnFooter.Controls.Add(this.pictureBox1);
@@ -75,76 +73,7 @@
             this.pnFooter.Location = new System.Drawing.Point(0, 451);
             this.pnFooter.Name = "pnFooter";
             this.pnFooter.Size = new System.Drawing.Size(882, 108);
-            this.pnFooter.TabIndex = 3;
-            // 
-            // lbReturn
-            // 
-            this.lbReturn.AutoSize = true;
-            this.lbReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbReturn.Location = new System.Drawing.Point(414, 79);
-            this.lbReturn.Name = "lbReturn";
-            this.lbReturn.Size = new System.Drawing.Size(91, 24);
-            this.lbReturn.TabIndex = 26;
-            this.lbReturn.Text = "Trả sách";
-            // 
-            // btnReturn
-            // 
-            this.btnReturn.BackgroundImage = global::Library_Management.Properties.Resources.refresh_button;
-            this.btnReturn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnReturn.FlatAppearance.BorderSize = 0;
-            this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReturn.Location = new System.Drawing.Point(420, 10);
-            this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(74, 63);
-            this.btnReturn.TabIndex = 25;
-            this.btnReturn.UseVisualStyleBackColor = true;
-            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
-            // 
-            // lbBorrow
-            // 
-            this.lbBorrow.AutoSize = true;
-            this.lbBorrow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBorrow.Location = new System.Drawing.Point(334, 79);
-            this.lbBorrow.Name = "lbBorrow";
-            this.lbBorrow.Size = new System.Drawing.Size(69, 24);
-            this.lbBorrow.TabIndex = 24;
-            this.lbBorrow.Text = "Mượn ";
-            // 
-            // btnBorrow
-            // 
-            this.btnBorrow.BackgroundImage = global::Library_Management.Properties.Resources.instruction;
-            this.btnBorrow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnBorrow.FlatAppearance.BorderSize = 0;
-            this.btnBorrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBorrow.Location = new System.Drawing.Point(333, 11);
-            this.btnBorrow.Name = "btnBorrow";
-            this.btnBorrow.Size = new System.Drawing.Size(74, 69);
-            this.btnBorrow.TabIndex = 23;
-            this.btnBorrow.UseVisualStyleBackColor = true;
-            this.btnBorrow.Click += new System.EventHandler(this.btnBorrow_Click);
-            // 
-            // lbSearch
-            // 
-            this.lbSearch.AutoSize = true;
-            this.lbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSearch.Location = new System.Drawing.Point(239, 79);
-            this.lbSearch.Name = "lbSearch";
-            this.lbSearch.Size = new System.Drawing.Size(82, 24);
-            this.lbSearch.TabIndex = 22;
-            this.lbSearch.Text = "Tra cứu";
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackgroundImage = global::Library_Management.Properties.Resources.research;
-            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(242, 11);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(74, 69);
-            this.btnSearch.TabIndex = 21;
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.pnFooter.TabIndex = 1;
             // 
             // pictureBox3
             // 
@@ -190,17 +119,18 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(170, 79);
+            this.label2.Location = new System.Drawing.Point(157, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 24);
             this.label2.TabIndex = 16;
             this.label2.Text = "Sửa";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbDel
             // 
             this.lbDel.AutoSize = true;
             this.lbDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDel.Location = new System.Drawing.Point(90, 79);
+            this.lbDel.Location = new System.Drawing.Point(85, 79);
             this.lbDel.Name = "lbDel";
             this.lbDel.Size = new System.Drawing.Size(48, 24);
             this.lbDel.TabIndex = 15;
@@ -212,9 +142,9 @@
             this.lbAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAdd.Location = new System.Drawing.Point(6, 80);
             this.lbAdd.Name = "lbAdd";
-            this.lbAdd.Size = new System.Drawing.Size(70, 24);
+            this.lbAdd.Size = new System.Drawing.Size(64, 24);
             this.lbAdd.TabIndex = 14;
-            this.lbAdd.Text = "Thêm ";
+            this.lbAdd.Text = "Thêm";
             // 
             // button2
             // 
@@ -222,7 +152,7 @@
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(154, 12);
+            this.button2.Location = new System.Drawing.Point(143, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(77, 61);
             this.button2.TabIndex = 13;
@@ -234,9 +164,9 @@
             this.btnDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnDel.FlatAppearance.BorderSize = 0;
             this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDel.Location = new System.Drawing.Point(73, 14);
+            this.btnDel.Location = new System.Drawing.Point(77, 14);
             this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(85, 59);
+            this.btnDel.Size = new System.Drawing.Size(67, 59);
             this.btnDel.TabIndex = 12;
             this.btnDel.UseVisualStyleBackColor = true;
             // 
@@ -253,41 +183,30 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // dgvBooksManage
-            // 
-            this.dgvBooksManage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBooksManage.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dgvBooksManage.Location = new System.Drawing.Point(0, 0);
-            this.dgvBooksManage.Name = "dgvBooksManage";
-            this.dgvBooksManage.RowTemplate.Height = 24;
-            this.dgvBooksManage.Size = new System.Drawing.Size(882, 423);
-            this.dgvBooksManage.TabIndex = 2;
-            // 
-            // frmBooksManage
+            // frmTitlesManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(882, 559);
             this.Controls.Add(this.pnFooter);
-            this.Controls.Add(this.dgvBooksManage);
+            this.Controls.Add(this.dgvTitlesManage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmBooksManage";
-            this.Text = "frmBooksManag";
+            this.Name = "frmTitlesManage";
+            this.Text = "frmBooks";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTitlesManage)).EndInit();
             this.pnFooter.ResumeLayout(false);
             this.pnFooter.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBooksManage)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.DataGridView dgvTitlesManage;
         private System.Windows.Forms.Panel pnFooter;
-        private System.Windows.Forms.Label lbSearch;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -298,10 +217,5 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.DataGridView dgvBooksManage;
-        private System.Windows.Forms.Label lbBorrow;
-        private System.Windows.Forms.Button btnBorrow;
-        private System.Windows.Forms.Label lbReturn;
-        private System.Windows.Forms.Button btnReturn;
     }
 }

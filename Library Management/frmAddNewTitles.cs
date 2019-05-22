@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Library_Management
 {
-    public partial class frmBorrowAndReturnBooks : Form
+    public partial class frmAddNewTitles : Form
     {
-        public frmBorrowAndReturnBooks()
+        public frmAddNewTitles()
         {
             InitializeComponent();
         }

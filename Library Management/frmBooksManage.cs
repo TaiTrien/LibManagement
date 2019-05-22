@@ -30,16 +30,16 @@ namespace Library_Management
             frmSearchBooks.ShowDialog();
         }
 
+        //to create form to borrow books
         private void btnBorrow_Click(object sender, EventArgs e)
         {
-            frmBorrowAndReturnBooks frmBorrowBooks = new frmBorrowAndReturnBooks();
+            frmBorrowBooks frmBorrowBooks = new frmBorrowBooks();
             frmBorrowBooks.ShowDialog();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        // to create a form to return books
+        private void btnReturn_Click(object sender, EventArgs e)
         {
-            frmBorrowAndReturnBooks frmReturnBooks = new frmBorrowAndReturnBooks();
-            frmReturnBooks.Text = "Nhận trả sách";
+            frmReturnBooks frmReturnBooks = new frmReturnBooks();
             frmReturnBooks.ShowDialog();
         }
     }

@@ -8,7 +8,6 @@ E:\Study\LibManage\Library Management\Library Management\obj\Debug\GUI.csproj.Co
 E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library Management.exe
 E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library Management.pdb
 E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmMainMenu.resources
-E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmAddDelMod.resources
 E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmMenuBooks.resources
 E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmBooksManage.resources
 E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.Data.v17.1.dll
@@ -104,4 +103,9 @@ E:\Study\LibManage\Library Management\Library Management\bin\Debug\ru\DevExpress
 E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmAddNewBooks.resources
 E:\Study\LibManage\Library Management\Library Management\obj\Debug\GUI.csproj.CopyComplete
 E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmSearchBooks.resources
-E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmBorrowAndReturnBooks.resources
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmAddNewReaders.resources
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmAddNewTitles.resources
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmBorrowBooks.resources
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmReturnBooks.resources
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmTitlesManage.resources
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmReadersManage.resources

@@ -22,6 +22,7 @@ namespace Library_Management
             this.lbMessage.Hide();
             frmMenuBooks frmMenuBooks = new frmMenuBooks();
             frmMenuBooks.TopLevel = false;
+            this.pnDisplay.Controls.Clear();
             this.pnDisplay.Controls.Add(frmMenuBooks);
             frmMenuBooks.Show();
         }
@@ -30,10 +31,11 @@ namespace Library_Management
         {
             //To create & add menu readers to main menu
             this.lbMessage.Hide();
-            frmAddDelMod frmMenuReaders = new frmAddDelMod();
-            frmMenuReaders.TopLevel = false;
-            this.pnDisplay.Controls.Add(frmMenuReaders);
-            frmMenuReaders.Show();
+            frmReadersManage frmReadersManage = new frmReadersManage();
+            frmReadersManage.TopLevel = false;
+            this.pnDisplay.Controls.Clear();
+            this.pnDisplay.Controls.Add(frmReadersManage);
+            frmReadersManage.Show();
         }
 
     }
