@@ -15,5 +15,39 @@ namespace Library_Management
         {
             InitializeComponent();
         }
+        // To create placeholders
+        private void tbReaderCode_Enter(object sender, EventArgs e)
+        {
+            if (tbReaderCode.Text == "Mã độc giả")
+            {
+                tbReaderCode.Text = "";
+                tbReaderCode.ForeColor = Color.Black;
+            }
+        }
+        private void tbReaderCode_Leave(object sender, EventArgs e)
+        {
+            if (tbReaderCode.Text == "")
+            {
+                tbReaderCode.Text = "Mã độc giả";
+                tbReaderCode.ForeColor = Color.Gray;
+            }
+        }
+        private void tbBookCode_Enter(object sender, EventArgs e)
+        {
+            if (tbBookCode.Text == "Mã sách cần trả")
+            {
+                tbBookCode.Text = "";
+                tbBookCode.ForeColor = Color.Black;
+            }
+        }
+        private void tbBookCode_Leave(object sender, EventArgs e)
+        {
+            if (tbReaderCode.Text == "")
+            {
+                tbReaderCode.Text = "Mã sách cần trả";
+                tbReaderCode.ForeColor = Color.Gray;
+            }
+        }
+        //end placeholders
     }
 }

@@ -40,5 +40,25 @@ namespace Library_Management
             this.pnFooter.Hide();
             frmBooksManage.Show();
         }
+        // create a form to add, delete, modify author
+        private void btnAuthManage_Click(object sender, EventArgs e)
+        {
+            frmAuthsManage frmAddDelModAuth = new frmAuthsManage();
+            frmAddDelModAuth.TopLevel = false;
+            this.Controls.Add(frmAddDelModAuth);
+            this.pnControl.Hide();
+            this.pnFooter.Hide();
+            frmAddDelModAuth.Show();
+        }
+        // create a form to add, delete, modify types of book
+        private void btnTypesManage_Click(object sender, EventArgs e)
+        {
+            frmTypesManage frmAddDelModTypes = new frmTypesManage();
+            frmAddDelModTypes.TopLevel = false;
+            this.Controls.Add(frmAddDelModTypes);
+            this.pnControl.Hide();
+            this.pnFooter.Hide();
+            frmAddDelModTypes.Show();
+        }
     }
 }

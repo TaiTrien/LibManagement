@@ -15,5 +15,23 @@ namespace Library_Management
         {
             InitializeComponent();
         }
+        // To set placeholder
+        private void tbSearchBar_Enter(object sender, EventArgs e)
+        {
+            if (tbSearchBar.Text == "Tìm kiếm....")
+            {
+                tbSearchBar.Text = "";
+                tbSearchBar.ForeColor = Color.Black;
+            }
+        }
+        private void tbSearchBar_Leave(object sender, EventArgs e)
+        {
+            if (tbSearchBar.Text == "")
+            {
+                tbSearchBar.Text = "Tìm kiếm....";
+                tbSearchBar.ForeColor = Color.Gray;
+            }
+        }
+        // end place holder
     }
 }

@@ -28,191 +28,201 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbAuth = new System.Windows.Forms.Label();
+            this.lsbAuth = new System.Windows.Forms.ListBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lsbType = new System.Windows.Forms.ListBox();
             this.tbBookCode = new System.Windows.Forms.TextBox();
             this.tbTitlesCode = new System.Windows.Forms.TextBox();
             this.lbType = new System.Windows.Forms.Label();
-            this.tbAuth = new System.Windows.Forms.TextBox();
-            this.lsbType = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnAdd = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // monthCalendar1
+            // btnAdd
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(487, 7);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 31;
+            this.btnAdd.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAdd.BackgroundImage = global::Library_Management.Properties.Resources.add_web_page;
+            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Location = new System.Drawing.Point(12, 264);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(776, 58);
+            this.btnAdd.TabIndex = 44;
+            this.btnAdd.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.lbAuth);
+            this.panel1.Controls.Add(this.lsbAuth);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lsbType);
+            this.panel1.Controls.Add(this.tbBookCode);
+            this.panel1.Controls.Add(this.tbTitlesCode);
+            this.panel1.Controls.Add(this.lbType);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(776, 235);
+            this.panel1.TabIndex = 45;
+            // 
+            // lbAuth
+            // 
+            this.lbAuth.AutoSize = true;
+            this.lbAuth.Location = new System.Drawing.Point(530, 7);
+            this.lbAuth.Name = "lbAuth";
+            this.lbAuth.Size = new System.Drawing.Size(55, 17);
+            this.lbAuth.TabIndex = 56;
+            this.lbAuth.Text = "Tác giả";
+            // 
+            // lsbAuth
+            // 
+            this.lsbAuth.BackColor = System.Drawing.SystemColors.Control;
+            this.lsbAuth.FormattingEnabled = true;
+            this.lsbAuth.ItemHeight = 16;
+            this.lsbAuth.Items.AddRange(new object[] {
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f"});
+            this.lsbAuth.Location = new System.Drawing.Point(533, 30);
+            this.lsbAuth.Name = "lsbAuth";
+            this.lsbAuth.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.lsbAuth.Size = new System.Drawing.Size(200, 52);
+            this.lsbAuth.TabIndex = 55;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Library_Management.Properties.Resources.agenda;
+            this.pictureBox2.Location = new System.Drawing.Point(34, 150);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(59, 48);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 54;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Library_Management.Properties.Resources.notebook;
+            this.pictureBox1.Location = new System.Drawing.Point(35, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(59, 48);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 53;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label2.Location = new System.Drawing.Point(121, 193);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(262, 2);
+            this.label2.TabIndex = 52;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label1.Location = new System.Drawing.Point(121, 74);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(262, 2);
+            this.label1.TabIndex = 51;
+            // 
+            // lsbType
+            // 
+            this.lsbType.BackColor = System.Drawing.SystemColors.Control;
+            this.lsbType.FormattingEnabled = true;
+            this.lsbType.ItemHeight = 16;
+            this.lsbType.Items.AddRange(new object[] {
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f"});
+            this.lsbType.Location = new System.Drawing.Point(533, 150);
+            this.lsbType.Name = "lsbType";
+            this.lsbType.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.lsbType.Size = new System.Drawing.Size(200, 52);
+            this.lsbType.TabIndex = 50;
             // 
             // tbBookCode
             // 
             this.tbBookCode.BackColor = System.Drawing.SystemColors.Control;
             this.tbBookCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbBookCode.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.tbBookCode.Location = new System.Drawing.Point(183, 148);
+            this.tbBookCode.Location = new System.Drawing.Point(124, 170);
             this.tbBookCode.Name = "tbBookCode";
             this.tbBookCode.Size = new System.Drawing.Size(200, 15);
-            this.tbBookCode.TabIndex = 27;
+            this.tbBookCode.TabIndex = 49;
             this.tbBookCode.Text = "Tên đầu sách";
+            this.tbBookCode.Enter += new System.EventHandler(this.tbBookCode_Enter);
+            this.tbBookCode.Leave += new System.EventHandler(this.tbBookCode_Leave);
             // 
             // tbTitlesCode
             // 
             this.tbTitlesCode.BackColor = System.Drawing.SystemColors.Control;
             this.tbTitlesCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbTitlesCode.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.tbTitlesCode.Location = new System.Drawing.Point(183, 76);
+            this.tbTitlesCode.Location = new System.Drawing.Point(124, 51);
             this.tbTitlesCode.Name = "tbTitlesCode";
             this.tbTitlesCode.Size = new System.Drawing.Size(200, 15);
-            this.tbTitlesCode.TabIndex = 26;
+            this.tbTitlesCode.TabIndex = 48;
             this.tbTitlesCode.Text = "Mã đầu sách";
+            this.tbTitlesCode.Enter += new System.EventHandler(this.tbTitlesCode_Enter);
+            this.tbTitlesCode.Leave += new System.EventHandler(this.tbTitlesCode_Leave);
             // 
             // lbType
             // 
             this.lbType.AutoSize = true;
-            this.lbType.Location = new System.Drawing.Point(90, 275);
+            this.lbType.Location = new System.Drawing.Point(530, 126);
             this.lbType.Name = "lbType";
             this.lbType.Size = new System.Drawing.Size(59, 17);
-            this.lbType.TabIndex = 22;
+            this.lbType.TabIndex = 47;
             this.lbType.Text = "Thể loại";
-            // 
-            // tbAuth
-            // 
-            this.tbAuth.BackColor = System.Drawing.SystemColors.Control;
-            this.tbAuth.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbAuth.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.tbAuth.Location = new System.Drawing.Point(183, 215);
-            this.tbAuth.Multiline = true;
-            this.tbAuth.Name = "tbAuth";
-            this.tbAuth.Size = new System.Drawing.Size(200, 22);
-            this.tbAuth.TabIndex = 28;
-            this.tbAuth.Text = "Tác giả";
-            // 
-            // lsbType
-            // 
-            this.lsbType.FormattingEnabled = true;
-            this.lsbType.ItemHeight = 16;
-            this.lsbType.Location = new System.Drawing.Point(183, 276);
-            this.lsbType.Name = "lsbType";
-            this.lsbType.Size = new System.Drawing.Size(200, 148);
-            this.lsbType.TabIndex = 35;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label1.Location = new System.Drawing.Point(180, 99);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(262, 2);
-            this.label1.TabIndex = 38;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label2.Location = new System.Drawing.Point(180, 171);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(262, 2);
-            this.label2.TabIndex = 39;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label3.Location = new System.Drawing.Point(180, 240);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(262, 2);
-            this.label3.TabIndex = 40;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Library_Management.Properties.Resources.notebook;
-            this.pictureBox1.Location = new System.Drawing.Point(93, 53);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(59, 48);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 41;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Library_Management.Properties.Resources.agenda;
-            this.pictureBox2.Location = new System.Drawing.Point(93, 125);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(59, 48);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 42;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Library_Management.Properties.Resources.author_sign;
-            this.pictureBox3.Location = new System.Drawing.Point(93, 194);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(59, 48);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 43;
-            this.pictureBox3.TabStop = false;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.SystemColors.Control;
-            this.btnAdd.BackgroundImage = global::Library_Management.Properties.Resources.plus_128;
-            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Location = new System.Drawing.Point(487, 240);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(272, 188);
-            this.btnAdd.TabIndex = 44;
-            this.btnAdd.UseVisualStyleBackColor = false;
             // 
             // frmAddNewTitles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 334);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lsbType);
-            this.Controls.Add(this.monthCalendar1);
-            this.Controls.Add(this.tbAuth);
-            this.Controls.Add(this.tbBookCode);
-            this.Controls.Add(this.tbTitlesCode);
-            this.Controls.Add(this.lbType);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmAddNewTitles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm đầu sách mới";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lbAuth;
+        private System.Windows.Forms.ListBox lsbAuth;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox lsbType;
         private System.Windows.Forms.TextBox tbBookCode;
         private System.Windows.Forms.TextBox tbTitlesCode;
         private System.Windows.Forms.Label lbType;
-        private System.Windows.Forms.TextBox tbAuth;
-        private System.Windows.Forms.ListBox lsbType;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button btnAdd;
     }
 }

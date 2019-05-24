@@ -11,9 +11,11 @@ namespace Library_Management
 {
     public partial class frmMainMenu : Form
     {
+        Form frmParent;
         public frmMainMenu()
         {
             InitializeComponent();
+            frmParent = ParentForm;
         }
 
         private void btnBooks_Click(object sender, EventArgs e)
@@ -38,5 +40,21 @@ namespace Library_Management
             frmReadersManage.Show();
         }
 
+        private void btnReports_Click(object sender, EventArgs e)
+        {
+            // to create & add menu reports to main menu
+            this.lbMessage.Hide();
+            frmMenuReports frmMenuReports = new frmMenuReports();
+            frmMenuReports.TopLevel = false;
+            this.pnDisplay.Controls.Clear();
+            this.pnDisplay.Controls.Add(frmMenuReports);
+            frmMenuReports.Show();
+        }
+
+        private void frmMainMenu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.Show();
+        }
     }
 }

@@ -34,6 +34,7 @@
     <Reference Include="DevExpress.Data.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -52,11 +53,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAddNewAuths.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddNewAuths.Designer.cs">
+      <DependentUpon>frmAddNewAuths.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddNewBooks.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAddNewBooks.Designer.cs">
       <DependentUpon>frmAddNewBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAuthsManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAuthsManage.Designer.cs">
+      <DependentUpon>frmAuthsManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLateReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLateReturn.Designer.cs">
+      <DependentUpon>frmLateReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRPBorrowedBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRPBorrowedBooks.Designer.cs">
+      <DependentUpon>frmRPBorrowedBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuReports.Designer.cs">
+      <DependentUpon>frmMenuReports.cs</DependentUpon>
     </Compile>
     <Compile Include="frmReadersManage.cs">
       <SubType>Form</SubType>
@@ -124,10 +155,31 @@
     <Compile Include="frmSearchBooks.Designer.cs">
       <DependentUpon>frmSearchBooks.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTypesManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTypesManage.Designer.cs">
+      <DependentUpon>frmTypesManage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAddNewAuths.resx">
+      <DependentUpon>frmAddNewAuths.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddNewBooks.resx">
       <DependentUpon>frmAddNewBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAuthsManage.resx">
+      <DependentUpon>frmAuthsManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLateReturn.resx">
+      <DependentUpon>frmLateReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRPBorrowedBooks.resx">
+      <DependentUpon>frmRPBorrowedBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuReports.resx">
+      <DependentUpon>frmMenuReports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReadersManage.resx">
       <DependentUpon>frmReadersManage.cs</DependentUpon>
@@ -161,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSearchBooks.resx">
       <DependentUpon>frmSearchBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTypesManage.resx">
+      <DependentUpon>frmTypesManage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -298,6 +353,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bald-man-with-glasses.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-web-page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UIT.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analysis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\website.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\administration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shakespeare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notebook69.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add types.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

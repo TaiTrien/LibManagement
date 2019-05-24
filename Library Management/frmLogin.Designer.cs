@@ -31,6 +31,7 @@
             this.pnLogin = new System.Windows.Forms.Panel();
             this.tbForgotPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.pbX = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbPassword = new System.Windows.Forms.TextBox();
@@ -38,12 +39,11 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pbX = new System.Windows.Forms.PictureBox();
             this.pnLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbX)).BeginInit();
             this.SuspendLayout();
             // 
             // pnLogin
@@ -91,6 +91,17 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // pbX
+            // 
+            this.pbX.Image = global::Library_Management.Properties.Resources.cancel2;
+            this.pbX.Location = new System.Drawing.Point(263, 3);
+            this.pbX.Name = "pbX";
+            this.pbX.Size = new System.Drawing.Size(43, 50);
+            this.pbX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbX.TabIndex = 14;
+            this.pbX.TabStop = false;
+            this.pbX.Click += new System.EventHandler(this.pbX_Click);
+            // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -118,6 +129,8 @@
             this.tbPassword.Size = new System.Drawing.Size(144, 27);
             this.tbPassword.TabIndex = 11;
             this.tbPassword.Text = "PASSWORD";
+            this.tbPassword.Enter += new System.EventHandler(this.tbPassword_Enter);
+            this.tbPassword.Leave += new System.EventHandler(this.tbPassword_Leave);
             // 
             // tbUserName
             // 
@@ -130,6 +143,8 @@
             this.tbUserName.Size = new System.Drawing.Size(144, 27);
             this.tbUserName.TabIndex = 10;
             this.tbUserName.Text = "USER NAME";
+            this.tbUserName.Enter += new System.EventHandler(this.tbUserName_Enter);
+            this.tbUserName.Leave += new System.EventHandler(this.tbUserName_Leave);
             // 
             // pictureBox3
             // 
@@ -161,16 +176,6 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // pbX
-            // 
-            this.pbX.Image = global::Library_Management.Properties.Resources.cancel2;
-            this.pbX.Location = new System.Drawing.Point(263, 3);
-            this.pbX.Name = "pbX";
-            this.pbX.Size = new System.Drawing.Size(43, 50);
-            this.pbX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbX.TabIndex = 14;
-            this.pbX.TabStop = false;
-            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -183,10 +188,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.pnLogin.ResumeLayout(false);
             this.pnLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbX)).EndInit();
             this.ResumeLayout(false);
 
         }

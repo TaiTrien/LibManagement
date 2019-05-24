@@ -109,3 +109,15 @@ E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Manag
 E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmReturnBooks.resources
 E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmTitlesManage.resources
 E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmReadersManage.resources
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.Xpo.v17.1.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\DevExpress.Xpo.v17.1.xml
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\de\DevExpress.Xpo.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\es\DevExpress.Xpo.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ja\DevExpress.Xpo.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\bin\Debug\ru\DevExpress.Xpo.v17.1.resources.dll
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmMenuReports.resources
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmRPBorrowedBooks.resources
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmLateReturn.resources
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmAuthsManage.resources
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmTypesManage.resources
+E:\Study\LibManage\Library Management\Library Management\obj\Debug\Library_Management.frmAddNewAuths.resources

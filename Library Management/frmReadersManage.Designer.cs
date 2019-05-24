@@ -33,18 +33,18 @@
             this.lbDel = new System.Windows.Forms.Label();
             this.lbAdd = new System.Windows.Forms.Label();
             this.pnFooter = new System.Windows.Forms.Panel();
+            this.dgvReadersManage = new System.Windows.Forms.DataGridView();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnMod = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.dgvReadersManage = new System.Windows.Forms.DataGridView();
             this.pnFooter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReadersManage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReadersManage)).BeginInit();
             this.SuspendLayout();
             // 
             // lbContact
@@ -96,7 +96,7 @@
             this.pnFooter.Controls.Add(this.label2);
             this.pnFooter.Controls.Add(this.lbDel);
             this.pnFooter.Controls.Add(this.lbAdd);
-            this.pnFooter.Controls.Add(this.button2);
+            this.pnFooter.Controls.Add(this.btnMod);
             this.pnFooter.Controls.Add(this.btnDel);
             this.pnFooter.Controls.Add(this.btnAdd);
             this.pnFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -104,6 +104,16 @@
             this.pnFooter.Name = "pnFooter";
             this.pnFooter.Size = new System.Drawing.Size(882, 109);
             this.pnFooter.TabIndex = 5;
+            // 
+            // dgvReadersManage
+            // 
+            this.dgvReadersManage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReadersManage.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgvReadersManage.Location = new System.Drawing.Point(0, 0);
+            this.dgvReadersManage.Name = "dgvReadersManage";
+            this.dgvReadersManage.RowTemplate.Height = 24;
+            this.dgvReadersManage.Size = new System.Drawing.Size(882, 423);
+            this.dgvReadersManage.TabIndex = 4;
             // 
             // pictureBox3
             // 
@@ -135,17 +145,17 @@
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
-            // button2
+            // btnMod
             // 
-            this.button2.BackgroundImage = global::Library_Management.Properties.Resources.maintenance;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(154, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(77, 61);
-            this.button2.TabIndex = 13;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnMod.BackgroundImage = global::Library_Management.Properties.Resources.maintenance;
+            this.btnMod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMod.FlatAppearance.BorderSize = 0;
+            this.btnMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMod.Location = new System.Drawing.Point(154, 12);
+            this.btnMod.Name = "btnMod";
+            this.btnMod.Size = new System.Drawing.Size(77, 61);
+            this.btnMod.TabIndex = 13;
+            this.btnMod.UseVisualStyleBackColor = true;
             // 
             // btnDel
             // 
@@ -172,16 +182,6 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // dgvReadersManage
-            // 
-            this.dgvReadersManage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReadersManage.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dgvReadersManage.Location = new System.Drawing.Point(0, 0);
-            this.dgvReadersManage.Name = "dgvReadersManage";
-            this.dgvReadersManage.RowTemplate.Height = 24;
-            this.dgvReadersManage.Size = new System.Drawing.Size(882, 423);
-            this.dgvReadersManage.TabIndex = 4;
-            // 
             // frmReadersManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -194,10 +194,10 @@
             this.Text = "frmMenuReaders";
             this.pnFooter.ResumeLayout(false);
             this.pnFooter.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReadersManage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReadersManage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -211,7 +211,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbDel;
         private System.Windows.Forms.Label lbAdd;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnMod;
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Panel pnFooter;

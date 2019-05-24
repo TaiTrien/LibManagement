@@ -37,7 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lbDel = new System.Windows.Forms.Label();
             this.lbAdd = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnMod = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTitlesManage)).BeginInit();
@@ -66,7 +66,7 @@
             this.pnFooter.Controls.Add(this.label2);
             this.pnFooter.Controls.Add(this.lbDel);
             this.pnFooter.Controls.Add(this.lbAdd);
-            this.pnFooter.Controls.Add(this.button2);
+            this.pnFooter.Controls.Add(this.btnMod);
             this.pnFooter.Controls.Add(this.btnDel);
             this.pnFooter.Controls.Add(this.btnAdd);
             this.pnFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -146,17 +146,17 @@
             this.lbAdd.TabIndex = 14;
             this.lbAdd.Text = "Thêm";
             // 
-            // button2
+            // btnMod
             // 
-            this.button2.BackgroundImage = global::Library_Management.Properties.Resources.maintenance;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(143, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(77, 61);
-            this.button2.TabIndex = 13;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnMod.BackgroundImage = global::Library_Management.Properties.Resources.maintenance;
+            this.btnMod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMod.FlatAppearance.BorderSize = 0;
+            this.btnMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMod.Location = new System.Drawing.Point(143, 12);
+            this.btnMod.Name = "btnMod";
+            this.btnMod.Size = new System.Drawing.Size(77, 61);
+            this.btnMod.TabIndex = 13;
+            this.btnMod.UseVisualStyleBackColor = true;
             // 
             // btnDel
             // 
@@ -214,7 +214,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbDel;
         private System.Windows.Forms.Label lbAdd;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnMod;
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnAdd;
     }
