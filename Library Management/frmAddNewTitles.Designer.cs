@@ -31,15 +31,15 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbAuth = new System.Windows.Forms.Label();
-            this.lsbAuth = new System.Windows.Forms.ListBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lsbType = new System.Windows.Forms.ListBox();
-            this.tbBookCode = new System.Windows.Forms.TextBox();
+            this.tbTitlesName = new System.Windows.Forms.TextBox();
             this.tbTitlesCode = new System.Windows.Forms.TextBox();
             this.lbType = new System.Windows.Forms.Label();
+            this.lsbAuth = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -57,6 +57,7 @@
             this.btnAdd.Size = new System.Drawing.Size(776, 58);
             this.btnAdd.TabIndex = 44;
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // panel1
             // 
@@ -68,7 +69,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lsbType);
-            this.panel1.Controls.Add(this.tbBookCode);
+            this.panel1.Controls.Add(this.tbTitlesName);
             this.panel1.Controls.Add(this.tbTitlesCode);
             this.panel1.Controls.Add(this.lbType);
             this.panel1.Location = new System.Drawing.Point(12, 12);
@@ -84,24 +85,6 @@
             this.lbAuth.Size = new System.Drawing.Size(55, 17);
             this.lbAuth.TabIndex = 56;
             this.lbAuth.Text = "Tác giả";
-            // 
-            // lsbAuth
-            // 
-            this.lsbAuth.BackColor = System.Drawing.SystemColors.Control;
-            this.lsbAuth.FormattingEnabled = true;
-            this.lsbAuth.ItemHeight = 16;
-            this.lsbAuth.Items.AddRange(new object[] {
-            "a",
-            "b",
-            "c",
-            "d",
-            "e",
-            "f"});
-            this.lsbAuth.Location = new System.Drawing.Point(533, 30);
-            this.lsbAuth.Name = "lsbAuth";
-            this.lsbAuth.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.lsbAuth.Size = new System.Drawing.Size(200, 52);
-            this.lsbAuth.TabIndex = 55;
             // 
             // pictureBox2
             // 
@@ -157,18 +140,18 @@
             this.lsbType.Size = new System.Drawing.Size(200, 52);
             this.lsbType.TabIndex = 50;
             // 
-            // tbBookCode
+            // tbTitlesName
             // 
-            this.tbBookCode.BackColor = System.Drawing.SystemColors.Control;
-            this.tbBookCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbBookCode.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.tbBookCode.Location = new System.Drawing.Point(124, 170);
-            this.tbBookCode.Name = "tbBookCode";
-            this.tbBookCode.Size = new System.Drawing.Size(200, 15);
-            this.tbBookCode.TabIndex = 49;
-            this.tbBookCode.Text = "Tên đầu sách";
-            this.tbBookCode.Enter += new System.EventHandler(this.tbBookCode_Enter);
-            this.tbBookCode.Leave += new System.EventHandler(this.tbBookCode_Leave);
+            this.tbTitlesName.BackColor = System.Drawing.SystemColors.Control;
+            this.tbTitlesName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbTitlesName.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.tbTitlesName.Location = new System.Drawing.Point(124, 170);
+            this.tbTitlesName.Name = "tbTitlesName";
+            this.tbTitlesName.Size = new System.Drawing.Size(200, 15);
+            this.tbTitlesName.TabIndex = 49;
+            this.tbTitlesName.Text = "Tên đầu sách";
+            this.tbTitlesName.Enter += new System.EventHandler(this.tbTitlesName_Enter);
+            this.tbTitlesName.Leave += new System.EventHandler(this.tbTitlesName_Leave);
             // 
             // tbTitlesCode
             // 
@@ -192,6 +175,24 @@
             this.lbType.TabIndex = 47;
             this.lbType.Text = "Thể loại";
             // 
+            // lsbAuth
+            // 
+            this.lsbAuth.BackColor = System.Drawing.SystemColors.Control;
+            this.lsbAuth.FormattingEnabled = true;
+            this.lsbAuth.ItemHeight = 16;
+            this.lsbAuth.Items.AddRange(new object[] {
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f"});
+            this.lsbAuth.Location = new System.Drawing.Point(533, 30);
+            this.lsbAuth.Name = "lsbAuth";
+            this.lsbAuth.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.lsbAuth.Size = new System.Drawing.Size(200, 52);
+            this.lsbAuth.TabIndex = 55;
+            // 
             // frmAddNewTitles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -203,6 +204,7 @@
             this.Name = "frmAddNewTitles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm đầu sách mới";
+            this.Load += new System.EventHandler(this.frmAddNewTitles_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -215,14 +217,14 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbAuth;
-        private System.Windows.Forms.ListBox lsbAuth;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox lsbType;
-        private System.Windows.Forms.TextBox tbBookCode;
+        private System.Windows.Forms.TextBox tbTitlesName;
         private System.Windows.Forms.TextBox tbTitlesCode;
         private System.Windows.Forms.Label lbType;
+        private System.Windows.Forms.ListBox lsbAuth;
     }
 }

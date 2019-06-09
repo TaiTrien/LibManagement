@@ -6,33 +6,23 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using QLTVBUS;
+using QLTVDTO;
 namespace Library_Management
 {
     public partial class frmAddNewBooks : Form
     {
+        private bookBUS addBookBUS;
+        private titlesBUS titlesBUS;
         public frmAddNewBooks()
         {
             InitializeComponent();
-        }
-        // To set placeholders for textboxs
-        private void tbTitlesCode_Enter(object sender, EventArgs e)
-        {
-            if (tbTitlesCode.Text == "Mã đầu sách")
-            {
-                tbTitlesCode.Text = "";
-                tbTitlesCode.ForeColor = Color.Black;
-            }
+            //to custom date of numbericupdown
+            nudValue.Value = (decimal)nudValue.Value;
         }
 
-        private void tbTitlesCode_Leave(object sender, EventArgs e)
-        {
-            if (tbTitlesCode.Text == "")
-            {
-                tbTitlesCode.Text = "Mã đầu sách";
-                tbTitlesCode.ForeColor = Color.Gray;
-            }
-        }
+        // To set placeholders for textboxs
+       
 
         private void tbBookCode_Enter(object sender, EventArgs e)
         {
@@ -50,38 +40,7 @@ namespace Library_Management
                 tbBookCode.ForeColor = Color.Gray;
             }
         }
-        private void tbAuth_Enter(object sender, EventArgs e)
-        {
-            if (tbAuth.Text == "Tác giả")
-            {
-                tbAuth.Text = "";
-                tbAuth.ForeColor = Color.Black;
-            }
-        }
-        private void tbAuth_Leave(object sender, EventArgs e)
-        {
-            if (tbAuth.Text == "")
-            {
-                tbAuth.Text = "Tác giả";
-                tbAuth.ForeColor = Color.Gray;
-            }
-        }
-        private void tbPublishYear_Enter(object sender, EventArgs e)
-        {
-            if (tbPublishYear.Text == "Năm xuất bản")
-            {
-                tbPublishYear.Text = "";
-                tbPublishYear.ForeColor = Color.Black;
-            }
-        }
-        private void tbPublishYear_Leave(object sender, EventArgs e)
-        {
-            if (tbPublishYear.Text == "")
-            {
-                tbPublishYear.Text = "Năm xuất bản";
-                tbPublishYear.ForeColor = Color.Gray;
-            }
-        }
+       
         private void tbPublisher_Enter(object sender, EventArgs e)
         {
             if (tbPublisher.Text == "Nhà xuất bản")
@@ -99,5 +58,53 @@ namespace Library_Management
             }
         }
         /*End placeholders*/
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            //map data from gui
+            bookDTO addBookDTO = new bookDTO();
+
+            addBookDTO.MaSach = tbBookCode.Text;
+            addBookDTO.MaDauSach = cbTitleName.SelectedValue.ToString();
+            addBookDTO.NgayNhap = dtpDateIn.Value;
+            addBookDTO.NamXuatBan = dtpPublishYear.Value;
+            addBookDTO.NhaXuatBan = tbPublisher.Text;
+            addBookDTO.TriGia = nudValue.Value;
+
+            //add into db
+            bool result = addBookBUS.add(addBookDTO);
+            if ( result == true)
+                MessageBox.Show("Thêm sách thành công");
+            else
+                MessageBox.Show("Thêm sách thất bại");
+        }
+
+        private void frmAddNewBooks_Load(object sender, EventArgs e)
+        {
+            addBookBUS = new bookBUS();
+            titlesBUS = new titlesBUS();
+            LoadTitlesInto_ComboBox();
+        }
+
+        private void LoadTitlesInto_ComboBox()
+        {
+            List<titlesDTO> listTitles = titlesBUS.selectedTitle();
+            if (cbTitleName == null)
+            {
+                MessageBox.Show("DB chưa có thông tin của bất cứ đầu sách nào");
+                return;
+            }
+            cbTitleName.DataSource = new BindingSource(listTitles, String.Empty);
+            cbTitleName.DisplayMember = "TenDauSach";
+            cbTitleName.ValueMember = "MaDauSach";
+
+            CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[cbTitleName.DataSource];
+            myCurrencyManager.Refresh();
+
+            if (cbTitleName.Items.Count > 0)
+            {
+                cbTitleName.SelectedIndex = 0;
+            }
+        }
+
     }
 }

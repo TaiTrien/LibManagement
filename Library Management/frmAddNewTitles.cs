@@ -6,11 +6,15 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using QLTVBUS;
+using QLTVDTO;
 
 namespace Library_Management
 {
     public partial class frmAddNewTitles : Form
     {
+        private titlesBUS titlesBUS;
+        private authBUS authBUS;
         public frmAddNewTitles()
         {
             InitializeComponent();
@@ -32,22 +36,67 @@ namespace Library_Management
                 tbTitlesCode.ForeColor = Color.Gray;
             }
         }
-        private void tbBookCode_Enter(object sender, EventArgs e)
+        private void tbTitlesName_Enter(object sender, EventArgs e)
         {
-            if (tbBookCode.Text == "Tên đầu sách")
+            if (tbTitlesName.Text == "Tên đầu sách")
             {
-                tbBookCode.Text = "";
-                tbBookCode.ForeColor = Color.Black;
+                tbTitlesName.Text = "";
+                tbTitlesName.ForeColor = Color.Black;
             }
         }
-        private void tbBookCode_Leave(object sender, EventArgs e)
+        private void tbTitlesName_Leave(object sender, EventArgs e)
         {
-            if (tbBookCode.Text == "")
+            if (tbTitlesName.Text == "")
             {
-                tbBookCode.Text = "Tên đầu sách";
-                tbBookCode.ForeColor = Color.Gray;
+                tbTitlesName.Text = "Tên đầu sách";
+                tbTitlesName.ForeColor = Color.Gray;
             }
         }
         //end placeholders
+
+        private void frmAddNewTitles_Load(object sender, EventArgs e)
+        {
+            titlesBUS = new titlesBUS();
+            authBUS = new authBUS();
+            loadAuthInto_ListBox();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            //Map data from gui
+            titlesDTO titlesDTO = new titlesDTO();
+            titlesDTO.MaDauSach = tbTitlesCode.Text;
+            titlesDTO.TenDauSach = tbTitlesName.Text;
+            titlesDTO.MaTacGia = lsbAuth.SelectedValue.ToString();
+           // titlesDTO.TheLoai = lsbType.Text;
+
+            //Add into DB
+            bool result = titlesBUS.add(titlesDTO);
+            if (result == true)
+                MessageBox.Show("Thêm đầu sách thành công");
+            else
+                MessageBox.Show("Thêm đầu sách thất bại");
+        }
+        private void loadAuthInto_ListBox()
+        {
+            List<authDTO> listAuth = authBUS.selectedAuth();
+            if (lsbAuth == null)
+            {
+                MessageBox.Show("DB chưa có thông tin của bất cứ tác giả nào");
+                return;
+            }
+            lsbAuth.DataSource = new BindingSource(listAuth, String.Empty);
+            lsbAuth.DisplayMember = "TenTacGia";
+            lsbAuth.ValueMember = "MaTacGia";
+
+            CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[lsbAuth.DataSource];
+            myCurrencyManager.Refresh();
+
+            if (lsbAuth.Items.Count > 0)
+            {
+                lsbAuth.SelectedIndex = 0;
+            }
+
+        }
     }
 }

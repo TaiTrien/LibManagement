@@ -6,12 +6,16 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using QLTVDTO;
+using QLTVBUS;
 namespace Library_Management
 {
-    public partial class frmAddNewAuths : Form
+    public partial class frmAddAuths : Form
     {
-        public frmAddNewAuths()
+        
+        private authBUS authBUS;
+        private authDTO authDTO;
+        public frmAddAuths()
         {
             InitializeComponent();
             
@@ -35,7 +39,7 @@ namespace Library_Management
         }
         private void tbAuthCode_Enter(object sender, EventArgs e)
         {
-            if (tbAuthCode.Text == "Họ tên")
+            if (tbAuthCode.Text == "Mã tác giả")
             {
                 tbAuthCode.Text = "";
                 tbAuthCode.ForeColor = Color.Black;
@@ -45,10 +49,35 @@ namespace Library_Management
         {
             if (tbAuthCode.Text == "")
             {
-                tbAuthCode.Text = "Họ tên";
+                tbAuthCode.Text = "Mã tác giả";
                 tbAuthCode.ForeColor = Color.Gray;
             }
         }
         //To end placeholders
-    }
+        public void btnAdd_Click(object sender, EventArgs e)
+        {
+           bool result;
+          
+                //map data from gui
+                authDTO.MaTacGia = tbAuthCode.Text;
+                authDTO.TenTacGia = tbName.Text;
+                authDTO.NgaySinh = dtpDob.Value;
+
+                //add into db
+                result = authBUS.add(authDTO);
+                if (result == false)
+                    MessageBox.Show("Thêm thất bại.");
+                else
+                    MessageBox.Show("Thêm thành công.");
+         
+        }
+       
+        
+        private void frmAddNewAuths_Load(object sender, EventArgs e)
+        {
+            authBUS = new authBUS();
+            authDTO = new authDTO();
+        }
+
+     }
 }
